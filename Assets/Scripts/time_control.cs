@@ -20,5 +20,10 @@ public class time_control : MonoBehaviour
 
         timer.text = start_time.ToString("f0");
         start_time -= Time.deltaTime;
+
+        if (start_time < 0)
+        {
+            Debug.Log("Time elapsed: Game Over!");
+        }
     }
 }
